@@ -3,9 +3,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-void main() {
-  runApp(MyApp());
-}
+//Continue on 30.
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key key}) : super(key: key);
@@ -20,7 +19,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Title Bar App"),
         ),
-        body: Center(child: Text("Hello Flutter!")),
+        body: Column(
+          children: [
+            Text("The questions!"),
+            ElevatedButton(
+              onPressed: () => debugPrint("pressed"),
+              child: Text("press"),
+            ),
+          ],
+        ),
       ),
     );
   }
